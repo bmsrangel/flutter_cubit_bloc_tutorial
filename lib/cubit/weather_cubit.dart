@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_cubit_bloc_tutorial/data/model/weather.dart';
-import 'package:flutter_cubit_bloc_tutorial/data/weather_repository.dart';
 import 'package:meta/meta.dart';
+
+import '../data/model/weather.dart';
+import '../data/weather_repository.dart';
 
 part 'weather_state.dart';
 

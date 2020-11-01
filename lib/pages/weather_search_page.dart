@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_cubit_bloc_tutorial/bloc/weather_bloc.dart';
-import 'package:flutter_cubit_bloc_tutorial/data/model/weather.dart';
-import 'package:flutter_cubit_bloc_tutorial/pages/widgets/city_input_field.dart';
+
+import '../bloc/weather_bloc.dart';
+import '../data/model/weather.dart';
+import 'widgets/city_input_field.dart';
 
 class WeatherSearchPage extends StatefulWidget {
   @override

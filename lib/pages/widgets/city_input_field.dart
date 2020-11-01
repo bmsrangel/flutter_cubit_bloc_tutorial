@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_cubit_bloc_tutorial/bloc/weather_bloc.dart';
+
+import '../../bloc/weather_bloc.dart';
 
 class CityInputField extends StatelessWidget {
   @override

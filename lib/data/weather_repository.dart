@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:flutter_cubit_bloc_tutorial/data/model/weather.dart';
+import 'model/weather.dart';
 
 abstract class WeatherRepository {
   Future<Weather> fetchWeather(String cityName);
