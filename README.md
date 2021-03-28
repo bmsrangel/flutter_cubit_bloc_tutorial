@@ -53,8 +53,8 @@ This package is quite complete. It not only brings _Cubit_ and _Bloc_ state mana
 
 ## Packages
 
-- (flutter_bloc)[https://pub.dev/packages/flutter_bloc]
-- (bloc)[https://pub.dev/packages/bloc]
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc)
+- [bloc](https://pub.dev/packages/bloc)
 
 &nbsp;
 
