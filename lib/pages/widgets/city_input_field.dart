@@ -10,6 +10,7 @@ class CityInputField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 50.0),
       child: TextField(
         onSubmitted: (value) => submitCityName(context, value),
+        onChanged: (value) => print(value),
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(
           hintText: "Enter a city",
