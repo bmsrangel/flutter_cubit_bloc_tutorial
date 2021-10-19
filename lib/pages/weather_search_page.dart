@@ -13,35 +13,37 @@ class WeatherSearchPage extends StatefulWidget {
 class _WeatherSearchPageState extends State<WeatherSearchPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Weather Search'),
-      ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(vertical: 16.0),
-        alignment: Alignment.center,
-        child: BlocConsumer<WeatherBloc, WeatherState>(
-          listener: (context, state) {
-            if (state is WeatherError) {
-              Scaffold.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(state.message),
-                ),
-              );
-            }
-          },
-          cubit: BlocProvider.of<WeatherBloc>(context),
-          builder: (context, state) {
-            if (state is WeatherInitial) {
-              return _buildInitialInput();
-            } else if (state is WeatherLoading) {
-              return _buildLoading();
-            } else if (state is WeatherLoaded) {
-              return _buildColumnWithData(state.weather);
-            } else {
-              return _buildInitialInput();
-            }
-          },
+    return ScaffoldMessenger(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Weather Search'),
+        ),
+        body: Container(
+          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          alignment: Alignment.center,
+          child: BlocConsumer<WeatherBloc, WeatherState>(
+            listener: (context, state) {
+              if (state is WeatherError) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(state.message),
+                  ),
+                );
+              }
+            },
+            bloc: BlocProvider.of<WeatherBloc>(context),
+            builder: (context, state) {
+              if (state is WeatherInitial) {
+                return _buildInitialInput();
+              } else if (state is WeatherLoading) {
+                return _buildLoading();
+              } else if (state is WeatherLoaded) {
+                return _buildColumnWithData(state.weather);
+              } else {
+                return _buildInitialInput();
+              }
+            },
+          ),
         ),
       ),
     );
